@@ -1,5 +1,5 @@
  
-<h2><?php echo "Mailla Costa 3C Calendario<br> "?></h2>
+<h2><?php echo "Mailla Costa 3C <br> Calendario"?></h2>
 <?php
 date_default_timezone_set('America/Sao_Paulo');
 
@@ -12,17 +12,17 @@ date_default_timezone_set('America/Sao_Paulo');
 
     $hora = date('H');
     if ($hora >= 6 && $hora <=12){
-        echo  "Bom dia!";
+        echo  " <br> Bom dia!";
     }
-    echo " <br> Agora são:  ". date('<br> H:i:s A');
+    echo "Agora são:  ". date('<br> H:i:s A');
     
     $hora = date('H');
     if ($hora >= 13 && $hora <=17){
-        echo  "Boa tarde!";
+        echo  "<br> Boa tarde!";
     }
     $hora = date('H');
     if ($hora >= 18 && $hora <=23){
-        echo  "Bom dia";
+        echo  " <br> Boa noite!";
     }
     echo " <br> Hoje é dia: ". date('<br> d/m/Y <br>'); 
     echo "<hr>"
@@ -38,23 +38,20 @@ function linha($semana)
 {
 	echo "<tr>";
 	for ($i = 0; $i <= 6; $i++) {
-		if (isset($semana[$i])) {
-			echo "<td>{$semana[$i]}</td>";
+		if ((isset($semana[$i])) && ($semana [$i] == date('d'))) {
+			echo "<td><strong>{$semana[$i]}<strong></td>";
 
-		} else {
-			echo "<td></td>";
+		} else if (isset($semana[$i])){
+            echo "<td>{$semana[$i]}</td>";
+        } else {
+            echo "<td></td>";
+        }
+			
 		}
 	}
-    #echo "<tr>";
- #for ($i = 0; $i <= 6; $i++){
-   if ($semana[$i] == date('d')){
-	
-echo "<td><strong>$semana[$i]</strong></td>";
-   }
-}
-echo "<tr>";
+   
+echo "</tr>";
 
-#}
 
 function calendario()
 {
