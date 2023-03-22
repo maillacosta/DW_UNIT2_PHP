@@ -1,15 +1,29 @@
-html>
+<?php //Tags obrigatórias para junção de html com php = <form> e name=""?>
+
+
+<html>
     <head>
         <title> Gerenciador de Tarefas </title>
     </head>
     <body>
         <h1>Gerenciador de Tarefas </h1>
+        <h4> Maílla 3c </h4>
+        <br> 
         <form> <fieldset> <legend>Nova tarefa</legend> <label> 
             Tarefa: <input type="text" name="nome" />  </label>
-         <input type="submit" value="Cadastrar" /> </fieldset> </form>
+         <input type="submit" value="Cadastrar" /> </fieldset>
+
+         <label> 
+            Prazo: <input type="date" name="prazo" />  </label>
+         <input type="submit" value="Cadastrar" />
+
+         </form>
 
 
     </body>
 
 
 </html>
+
+<?php //Tags obrigatórias para junção de html com php = <form> e name=""?>
+
