@@ -1,0 +1,47 @@
+
+<?php
+
+//Maílla Costa, Regiane Brito - 3C
+
+#Manuseando as sessões
+
+
+/*criar, para que uma sessão seja criada precisamos 
+verificar se uma sessão já não está aberta fazendo o uso
+da função session_status(), */
+
+if (session_status() !== PHP_SESSION_ACTIVE){
+
+    session_start();
+}
+
+/*gravar valores, atribuindo a uma variavel super global, sendo
+que os dados atribuidos serão um array */
+
+$_SESSION['disciplina'] = 'Desenvolvimento Web ';
+$_SESSION['login'] = 'Regiane_mailla';
+
+/* recuperar; os valores serão recuperados
+a partir da variavel global*/ 
+
+echo $_SESSION['disciplina'];
+echo $_SESSION['login'];
+
+/*destruir, para destruirmos uma sessão é recomendado que 
+primeiro se exclua a sessão, pois é necessário que exista uma função
+aberta */
+
+#excluindo a sessão
+unset($_SESSION['disciplina']);
+unset($_SESSION['login']);
+
+session_unset();
+
+
+#destruindo a sessão 
+
+session_destroy();
+
+
+
+?>
