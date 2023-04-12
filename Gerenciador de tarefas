@@ -10,12 +10,50 @@
         <h4> Maílla 3c </h4>
         <br> 
         <form> <fieldset> <legend>Nova tarefa</legend> <label> 
-            Tarefa: <input type="text" name="nome" />  </label>
-         <input type="submit" value="Cadastrar" /> </fieldset>
+            <div style="width:100" > Tarefa: </div> 
+            <input type="text" name="tarefa" />  </label>
+            <input type="submit" value="Cadastrar" />
+         <br>
+         <br>
 
+         <!-- <label> 
+         <div style="width:100" > Descrição: </div>
+            <input type="text" name="descricao" />
+         </label>
+        
          <label> 
-            Prazo: <input type="date" name="prazo" />  </label>
-         <input type="submit" value="Cadastrar" />
+            <br>
+            <br>
+            <div style="width:100" > Prazo: </div>
+               <input type="date" name="prazo" />  </label>
+
+             <br>
+             <br>
+          <input type="submit" value="Cadastrar" />
+
+        </fieldset>
+        <br> 
+        !-->
+
+        <?php 
+            $lista_tarefas = array();
+
+            if (isset($_GET['tarefa'])){
+               $lista_tarefas = $_GET['tarefa']."<br>";
+            }
+        ?>
+         <?php /*
+            if (isset($_GET['descricao'])){
+                echo "Descrição de tarefa: ".$_GET['descricao']."<br>";
+            }
+        ?>
+        <?php 
+            if (isset($_GET['prazo'])){
+                echo "Prazo da tarefa: ".$_GET['prazo']."<br>";
+            }
+        ?>
+
+         
 
          </form>
 
@@ -26,4 +64,4 @@
 </html>
 
 <?php //Tags obrigatórias para junção de html com php = <form> e name=""?>
-
+*/
