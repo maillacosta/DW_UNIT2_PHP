@@ -33,7 +33,7 @@
 
         </fieldset>
         <br> 
-        !-->
+        -->
 
         <?php 
             $lista_tarefas = array();
