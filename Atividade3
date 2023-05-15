@@ -1,0 +1,12 @@
+#Listaoriginal
+
+<?php
+
+session_start();
+
+if (isset($_GET['nome']) && $_GET['nome'] != '') {
+    $lista_contatos = array();
+    $lista_contatos['nome'] = $_GET['nome'];
+
+
+    include "Ldecontatos.php";
