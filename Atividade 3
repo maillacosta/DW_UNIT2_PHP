@@ -1,0 +1,52 @@
+
+    
+    <html>
+<head>
+<meta charset="utf-8" />
+<title>Lista de Contatos </title>
+    <link rel="stylesheet" href="Listaoriginal.php" type="text/css" />
+</head>
+<body>
+    <h1>Lista de Contatos </h1>
+<form>
+<fieldset>
+<legend>Nova Contato</legend>
+<label>
+Nome:
+<input type="text" name="nome" />
+</label>
+<label>
+Telefone:
+<input type="text" name="telefone" />
+</label>
+<label>
+E-mail:
+<input type="text" name="email" />
+</label>
+<label>
+Descrição (Opcional):
+<input type="text" name="descricao" />  
+</label>
+<label>
+Data de Nadscimento:
+<input type="date" name="data" />
+  </label>
+
+<fieldset>
+<legend>Favorito:</legend>
+<label>
+<input type="radio" name="favorito" value="Sim" checked />
+Sim
+<input type="radio" name="favorito" value="nao" />
+Não
+</label>
+</fieldset>
+
+<input type="submit" value="Cadastrar" />
+</fieldset>
+</form>
+
+</table>
+</body>
+</html>
+
