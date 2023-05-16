@@ -1,40 +1,46 @@
 
- #Ldecontatos.php
+#Ldecontatos.php
  
-    <html>
+ <html>
 <head>
 <meta charset="utf-8" />
 <title>Lista de Contatos </title>
-    <link rel="stylesheet" href="Listaoriginal.php" type="text/css" />
+ <link rel="stylesheet" href="Listaoriginal.php" type="text/css" />
 </head>
 <body>
-    <h1>Lista de Contatos </h1>
+ <h1>Lista de Contatos </h1>
 <form>
 <fieldset>
 <legend>Nova Contato</legend>
 <label>
-Nome:
+<div style="width:100" >
+Nome: </div>
 <input type="text" name="nome" />
 </label>
 <label>
-Telefone:
+<div style="width:100" > 
+Telefone: </div>
 <input type="text" name="telefone" />
 </label>
 <label>
-E-mail:
+<div style="width:100" > 
+E-mail: </div>
 <input type="text" name="email" />
 </label>
 <label>
-Descrição (Opcional):
+<div style="width:100" > 
+Descrição (Opcional): </div>
 <input type="text" name="descricao" />  
 </label>
 <label>
-Data de Nadscimento:
+<div style="width:100" > 
+Data de Nascimento: </div>
 <input type="date" name="data" />
-  </label>
-
+</label>
+<br>
+<br>
 <fieldset>
-<legend>Favorito:</legend>
+<legend> Favorito:</legend>
 <label>
 <input type="radio" name="favorito" value="Sim" checked />
 Sim
@@ -42,12 +48,52 @@ Sim
 Não
 </label>
 </fieldset>
-
-<input type="submit" value="Cadastrar" />
+<br>
+<input type="submit" value=" Salvar contato" />
 </fieldset>
 </form>
-
+</table>
+<table>
+<tr>
+    <th> Lista de Contatos </th>
+</tr>
+    <?php foreach ($Ldecontatos as $contato ) : ?>
+        <tr>
+            <td><?php echo $contato; ?> </td>
+         </tr>
+    <?php endforeach; ?>
 </table>
 </body>
 </html>
+
+<table>
+
+<tr>
+    <th> Nome </th>
+    <th> Telefone </th>
+    <th> E-mail </th>
+    <th> Descrição </th>
+    <th> D/Nascimento </th>
+    <th> Favorito </th>
+</tr>
+
+ <?php foreach ( $contato as $Ldecontatos); ?>
+ <tr> 
+    <td><?php echo $lista_original ['nome'];  ?></td>
+    <td><?php echo $lista_original ['telefone'];   ?></td>
+    <td><?php echo $lista_original ['email'];  ?></td>
+    <td><?php echo $lista_original ['descricao'];  ?></td>
+    <td><?php echo $lista_original ['datanascimento'];  ?></td>
+    <td><?php echo $lista_original ['favorito'];  ?></td>
+
+
+
+
+ </tr>
+
+
+
+
+</table>
+
 
